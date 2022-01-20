@@ -1,0 +1,91 @@
+﻿<style>
+    body {
+        width: 610px;
+    }
+
+    .mainmenu {
+        margin: 5px 0px;
+        line-height: 30px;
+        background-color: #25649F;
+    }
+
+        .mainmenu a {
+            margin: 10px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+    .submenu {
+        display: none;
+    }
+
+        .submenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0px;
+        }
+
+        .submenu li {
+            background-color: #EEEEEE;
+            margin-bottom: 1px;
+            line-height: 30px;
+        }
+
+            .submenu li a {
+                color: #000000;
+            }
+
+    #expand-collapse {
+        text-align: right;
+        margin: 15px 5px 15px 0px;
+        cursor: pointer;
+        text-decoration: underline;
+        color: #09f;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+function expandCollapse() {
+        if ($(".submenu").css('display') == 'none') {
+            $("#expand-collapse").html("Collapse All");
+            $(".submenu").show("slow");
+        } else {
+            $("#expand-collapse").html("Expand All");
+            $(".submenu").hide("slow");
+        }
+}
+</script>
+<div id="expand-collapse" onClick="expandCollapse()" align="right">Expand All</div>
+<div class="mainmenu" id="popular">
+    <a href="#">Popular Toys</a>
+    <div class="submenu">
+        <ul>
+            <li><a href="#">Video Games</a></li>
+            <li><a href="#">Barbies</a></li>
+            <li><a href="#">Teddy Bear</a></li>
+            <li><a href="#">Golf Set</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainmenu" id="recent">
+    <a href="#">Recent Toys</a>
+    <div class="submenu">
+        <ul>
+            <li><a href="#">Yoyo</a></li>
+            <li><a href="#">Doctor Kit</a></li>
+            <li><a href="#">Puzzles</a></li>
+            <li><a href="#">Uno Cards</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainmenu" id="category">
+    <a href="#">Toys Category</a>
+    <div class="submenu">
+        <ul>
+            <li><a href="#">Battery Toys</a></li>
+            <li><a href="#">Remote Toys</a></li>
+            <li><a href="#">Magnet Toys</a></li>
+            <li><a href="#">Soft Toys</a></li>
+        </ul>
+    </div>
+</div>
